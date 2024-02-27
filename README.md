@@ -13,4 +13,4 @@ python bot.py
 
 ## The proper way - via Docker
 
-See 
+Check the contents of `docker-compose.yaml` in the cloned directory, paste your token in, give it a `docker-compose up -d` and you're good to go. No ports need to be exposed. 
