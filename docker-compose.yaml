@@ -2,7 +2,7 @@ version: '3'
 
 services:
     webzero-bot:
-       image: turbotaxmachine/webzero-bot:v0.1.0
+       image: turbotaxmachine/webzero-bot:v0.1.0 # adjust the version, it's probably too old by the time you read this
        restart: always
        environment:
            - "TOKEN=secret_token"
