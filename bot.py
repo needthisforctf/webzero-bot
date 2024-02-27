@@ -5,13 +5,11 @@ types is used for type hinting like this: async def cmd_start(message: types.Mes
 F is the filter function: https://mastergroosha.github.io/aiogram-3-guide/filters-and-middlewares/
 '''
 import asyncio # it's all async
-from aiohttp import web
+from aiohttp import web # for healthcheck
 import logging
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode # to specify Markdown_V2 or HTML as parsing mode without dragging all enums 
-# from aiogram.utils.formatting import Text, Bold # to call formatting as function: Text(Bold('this'), Italics('that')) 
 import helpers # our helper functions
-
 from routers import message_monitor # importing routers
 
 logging.basicConfig(level=logging.INFO)
