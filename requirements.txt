@@ -1,0 +1,4 @@
+aiogram
+validators
+lxml
+fake_useragent
