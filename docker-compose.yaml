@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    webzero-bot:
+       image: turbotaxmachine/webzero-bot:v0.1.0
+       restart: always
+       environment:
+           - "TOKEN=secret_token"
+           - "URLSFILE=urls.json"
+       volumes:
+           - ./urls.json:/urls.json # make sure this file exists already when you up the container (it does if you cloned)
+       healthcheck:
+           test: curl --fail http://localhost:12345/healthcheck || exit 1
+           interval: 60s
+           retries: 3
+           start_period: 10s
+           timeout: 10s
